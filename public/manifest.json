@@ -1,0 +1,18 @@
+{
+  "name": "Томи Мишка — дизайн-студия",
+  "short_name": "Томи Мишка",
+  "description": "Рабочее пространство дизайнера · French IT. Точные 3D-эскизы и фотореалистичные рендеры.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0B0B12",
+  "theme_color": "#0B0B12",
+  "lang": "ru",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

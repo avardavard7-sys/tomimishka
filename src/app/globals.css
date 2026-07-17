@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --font-body: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Space Grotesk", "Inter", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+body {
+  @apply text-ink font-body antialiased;
+  background:
+    radial-gradient(1100px 700px at 85% -10%, rgba(139, 92, 246, 0.14), transparent 60%),
+    radial-gradient(900px 650px at -10% 110%, rgba(236, 72, 153, 0.11), transparent 55%),
+    radial-gradient(700px 500px at 50% 120%, rgba(255, 176, 32, 0.06), transparent 60%),
+    #0b0b12;
+  min-height: 100vh;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition-all disabled:cursor-not-allowed disabled:opacity-40;
+}
+.btn-primary {
+  @apply btn text-white;
+  background: linear-gradient(100deg, #8b5cf6, #ec4899 55%, #ffb020);
+  box-shadow: 0 0 26px rgba(139, 92, 246, 0.35), 0 4px 18px rgba(236, 72, 153, 0.22);
+}
+.btn-primary:hover:not(:disabled) {
+  filter: brightness(1.12);
+  box-shadow: 0 0 34px rgba(139, 92, 246, 0.5), 0 6px 22px rgba(236, 72, 153, 0.3);
+}
+.btn-ghost {
+  @apply btn border border-white/15 bg-white/[0.04] text-ink hover:border-white/40 hover:bg-white/[0.07];
+}
+.card {
+  @apply rounded-2xl border border-white/10 bg-white/[0.045] backdrop-blur-md;
+}
+.eyebrow {
+  @apply font-mono text-[11px] uppercase tracking-[0.18em] text-graphite;
+}
+.dim {
+  @apply font-mono text-dimred;
+}
+.glow-text {
+  @apply bg-gradient-to-r from-violet via-pink to-amber bg-clip-text text-transparent;
+}
+
+input[type="range"] {
+  height: 4px;
+}
+
+/* ---------- анимации ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pop {
+  0% { opacity: 0; transform: scale(0.25); }
+  70% { transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(36px, -28px); }
+}
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(5deg); }
+}
